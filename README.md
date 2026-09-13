@@ -5,6 +5,10 @@ Three agents with different tool scopes coordinate an incident response inside t
 
 Built for **Agents, Everywhere** — AI Tinkerers global hackathon, 12–13 September 2026.
 
+![Standup running a full incident chain in a Slack channel](docs/demo.png)
+
+*One thread, end to end: the analyst characterises a 34% checkout drop and routes it to engineering, the CTO scores behavioral impact against structural risk and files issue #47, the founder reassigns mid-chain because an engineer is out, and the customer email stops at a draft until someone clicks Approve.*
+
 ---
 
 ## The problem
