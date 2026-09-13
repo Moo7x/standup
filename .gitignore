@@ -1,0 +1,4 @@
+.env*
+.venv
+.claude.md
+__pycache__/

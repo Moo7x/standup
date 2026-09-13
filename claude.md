@@ -1,0 +1,5 @@
+- One-line description + "read README.md for design rationale"
+   - Stack (Python, Slack Bolt Socket Mode, OpenAI Agents SDK, Postgres/Neon, PyGithub, Brevo)
+   - The 5-file layout and the one-way dependency rule (app → agents → tools → db)
+   - Hard invariants lifted from the README: agents.py/tools.py never import Slack; sending email is never a tool — only the button handler sends; no repository/service/DI layers, only MetricsSource protocol; no run-log/audit tables — the Slack thread is the audit trail; structural_risk >= 4 floors P0
+   - Run commands (pip install -r requirements.txt, seed.py, app.py) and the env vars expected in .env.example
