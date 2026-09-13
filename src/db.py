@@ -33,7 +33,7 @@ class PostgresMetricsSource:
                 select metric, value, recorded_at
                 from product.metrics
                 where metric = %s
-                  and recorded_at >= now() - make_interval(days => %s)
+                and recorded_at >= now() - make_interval(days => %s)
                 order by recorded_at
                 """,
                 (metric, days),
@@ -59,7 +59,7 @@ def window_deltas() -> list[dict]:
         return conn.execute(
             """
             select metric,
-                   round(baseline, 2)                                    as baseline,
+                round(baseline, 2)                                    as baseline,
                    round("current", 2)                                   as "current",
                    round(("current" - baseline) / baseline * 100, 1)     as pct_change
             from (
